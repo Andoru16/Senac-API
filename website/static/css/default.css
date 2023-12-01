@@ -1,0 +1,351 @@
+/* Import Google font - Rubik */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Rubik', sans-serif;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opcity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes growDown {
+  0% {
+    transform: scaleY(0);
+  }
+  80% {
+    transform: scaleY(1.1);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes rotateX {
+  0% {
+    opacity: 0;
+    transform: rotateX(-90deg);
+  }
+  50% {
+    transform: rotateX(-20deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateX(0deg);
+  }
+}
+
+:root {
+  /* ===== Colors ===== */
+  --body-color: #e2f6f7; /* rgb(247,247,247); */
+  --sidebar-color: #FFF;
+  --primary-color: #00C2CB;
+  --primary-text: #FFF;
+  --primary-color-light: #F6F5FF;
+  --primary-color-light-2: #e6fbfc;
+  --primary-color-light-3: #E4E9F7;
+  --primary-color-light-4: var(--primary-color-light-3);
+  --toggle-color: #DDD;
+  --text-color: #707070;
+  --btn-color: #0b7379;
+  --shadown: #303030;
+  --excluir-background: #d70303;
+  --excluir-background2: #ae0505;
+  --excluir-text: #740303;
+  --white: #fff;
+
+  /* ===== Transition ===== */
+  --tran-02: all 0.2s ease;
+  --tran-03: all 0.3s ease;
+  --tran-04: all 0.3s ease;
+  --tran-05: all 0.3s ease;
+
+  /* ===== Animations ===== */
+  --anim-01: fadein 1s ease 0s 1 normal forwards;
+  --anim-02: fadein 2s ease 0s 1 normal forwards;
+  --anim-03: fadein 3s ease 0s 1 normal forwards;
+  --fadeTop-01: fadeTop 1s ease 0s 1 normal forwards;
+  --fadeOut-01: fadeOut 1s ease 6s 1 normal forwards;
+  --growDown-300: growDown 300ms ease-in-out forwards;
+  --rotateX-300: rotateX 300ms ease-in-out forwards;
+  --invert: 0%;
+}
+
+body {
+  height: 100%;
+  min-height: 100vh !important;
+  background-color: var(--body-color) !important;
+  transition: var(--tran-05) !important;
+  animation: var(--anim-01) !important;
+}
+
+.admin {
+  left: 30px;
+  font-size: 18px;
+}
+
+::selection {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+hr {
+  background-color: var(--text-color);
+}
+
+.navbar {
+  box-shadow: 0 0 5px var(--shadown);
+  background-color: var(--sidebar-color) !important;
+  height: 80px;
+}
+
+body.dark {
+  --body-color: #18191a;
+  --sidebar-color: #242526;
+  --primary-color: #00C2CB;
+  --primary-text: #FFF;
+  --primary-color-light: #3a3b3c;
+  --primary-color-light-2: #3a3b3c;
+  --primary-color-light-3: #4a4a4b;
+  --primary-color-light-4: var(--primary-color-light-3);
+  --toggle-color: #fff;
+  --text-color: #ccc;
+  --btn-color: #4a4a4b;
+  --shadown: #919090;
+  --invert: 100%;
+}
+
+.alert {
+  position: absolute;
+  text-align: center;
+  top: 75px;
+  width: 80vw;
+  left: 10vw;
+  animation: var(--fadeTop-01), var(--fadeOut-01);
+}
+
+.navbar {
+  position: fixed;
+  width: 100vw;
+  z-index: 9999; /* Add a high z-index value */
+}
+
+.navbar .navbar-brand img {
+  filter: invert(var(--invert));
+  width: 150px;
+  border-radius: 6px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  padding-right: 40px;
+}
+
+.dark-mode-toggle {
+  position: absolute;
+  top: 90px;
+  right: 15px;
+  color: var(--text-color);
+  border: 2px solid currentColor !important;
+  padding: 4px;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 30px;
+  height: 30px;
+}
+
+.dark-mode-toggle i {
+  position: relative;
+  bottom: 3px;
+}
+
+.navbar i {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  font-size: 35px;
+  color: var(--text-color);
+}
+
+.navbar .name {
+  position: absolute;
+  top: 22px;
+  right: 75px;
+  font-size: 20px;
+  color: var(--text-color)
+}
+
+.modal-dialog {
+  color: var(--text-color);
+}
+
+.modal-content {
+  background-color: var(--sidebar-color);
+}
+
+.btn-close {
+  background-color: var(--primary-color-light-3);
+}
+
+.navbar .dropdown-toggle {
+  color: var(--text-color) !important;
+  width: 160px;
+  text-align: center;
+}
+
+.navbar-nav .dropdown-menu {
+  position: absolute;
+  width: 155px;
+  text-align: left;
+  border-top: none;
+  border-radius: 0 0 5px 5px !important;
+  background-color: var(--sidebar-color);
+  animation: var(--rotateX-300);
+  z-index: 99999; /* Add a high z-index value */
+}
+
+.selector ul {
+  float: left !important;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.container-flex {
+  white-space: nowrap !important;
+}
+
+.navbar-nav .dropdown-menu .dropdown-item {
+  display: list-item !important;
+  color: var(--text-color);
+}
+
+.navbar-nav .dropdown-menu .dropdown-item:hover {
+  background-color: var(--primary-color);
+  color: var(--primary-text);
+  transition: var(--tran-04);
+}
+
+.seletor {
+  position: absolute;
+  display: inline-block !important;
+  left: 140px;
+}
+
+.resetSenha input {
+  border: 2px solid currentColor !important;
+  border-radius: 6px;
+  padding: 4px;
+  color: var(--text-color);
+  background-color: var(--sidebar-color);
+}
+
+.reset {
+  position: absolute;
+  left: 2%;
+  color: var(--primary-text);
+  background-color: var(--primary-color);
+}
+
+.reset:hover {
+  transition: var(--tran-04);
+  color: var(--primary-color);
+  background-color: var(--sidebar-color);
+  outline-color: var(--primary-color);
+}
+
+.close {
+  color: var(--text-color) !important;
+  background-color: var(--primary-color-light-2) !important;
+}
+
+.dropdown-item {
+  z-index: 99999; /* Add a high z-index value */
+}
+
+.submit button {
+  position: absolute;
+  bottom: 17px;
+  left: 4%;
+}
+
+.modelos {
+  position: absolute;
+  left: 290px;
+}
+
+.plano {
+  position: absolute;
+  top: 0;
+  left: 140px;
+}
+
+.nav-link:focus-visible {
+  box-shadow: none !important;
+}
+
+.body-sidebar {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  overflow-y: scroll;
+  background-color: var(--sidebar-color);
+  color: var(--text-color);
+  border: 30px solid var(--sidebar-color);
+  box-shadow: 0 2px 5px var(--shadown);
+  z-index: 9998; /* Add a high z-index value */
+}
+
+.body-sidebar .btn {
+  color: var(--text-color);
+  border-radius: 6px;
+  background-color: var(--primary-color-light-2);
+  box-shadow: 0 0 2px var(--shadown);
+  margin-bottom: 10px;
+}
+
+.body-sidebar .btn:hover {
+  color: var(--primary-text);
+  border-radius: 6px;
+  background-color: var(--primary-color-light-3);
+  box-shadow: 0 0 5px var(--shadown);
+  transition: var(--tran-02);
+}
+
+.modal {
+    z-index: 999999;
+}

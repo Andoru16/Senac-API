@@ -1,0 +1,15 @@
+{% extends 'default.html' %}
+{% block body %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/mercadinho.css') }}">
+<div class="mercado">
+    <div class="item">
+        <form action='/comprar' method="post" id="1">
+        <img class='imagen_produto' src="{{ url_for('static', filename='imagens/produtos/1.jpeg') }}"/>
+        <h1 class='titulo_produto'>Computador</h1>
+        <n/>
+        <h2 class='valor'>R$ 1.500,00</h2>
+        <input class='comprar' type='submit' value='Comprar'/>
+        </form>
+    </div>
+</div>
+{% endblock %}

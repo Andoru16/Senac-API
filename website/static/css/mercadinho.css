@@ -1,0 +1,44 @@
+.mercado {
+    position: relative;
+    width: auto;
+    height: auto;
+    padding: 30px;
+    top: 80px !important;
+}
+
+.item {
+    width: 300px;
+    height: 480px;
+    background-color:azure;
+    box-shadow: 0 0 5px;
+    padding: 10px;
+    border-radius: 15px;
+    left: auto;
+    right: auto;
+}
+
+.imagen_produto {
+    width: 280px;
+    height: 280px;
+    position: relative;
+}
+
+.comprar {
+    background-color: blue;
+    font-size: 18px;
+    color:aliceblue;
+    width: 280px;
+    height: 30px;
+    position: relative;
+    top: 30px;
+    border-radius: 15px;
+    border: 0;
+}
+
+.titulo_produto {
+    text-align: center;
+}
+
+.valor {
+    text-align: center;
+}
