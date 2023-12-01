@@ -1,0 +1,10 @@
+flask
+pathlib
+Flask-SQLAlchemy
+greenlet
+sqlalchemy_utils
+sqlalchemy
+flask_toastr
+flask_migrate
+requests
+py-zabbix
